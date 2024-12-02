@@ -69,7 +69,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/biliup/caution
+            ghcr.io/dlmubs/biliup/caution
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
