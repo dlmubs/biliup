@@ -1,4 +1,4 @@
-
+FROM ghcr.io/biliup/caution:latest
 # Modify the Dockerfile to use Azure App Service's persistent storage location
 WORKDIR /home/site/wwwroot
 
