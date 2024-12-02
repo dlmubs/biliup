@@ -92,15 +92,28 @@ RUN set -eux; \
 
 COPY --from=webui /biliup/biliup/web/public/ /biliup/biliup/web/public/
 
-WORKDIR /home/site/wwwroot
+# Copy config.yaml from public folder to /opt
+COPY --from=webui /biliup/public/config.yaml /opt/config.yaml
 
-# Copy config and create directories
-RUN mkdir -p /home/site/wwwroot/downloads \
-    && mkdir -p /home/site/wwwroot/config
+# Copy cookies.json if it exists in the repo
+COPY --from=webui /biliup/cookies.json /opt/cookies.json
 
-# Update entrypoint to use the new location
-ENTRYPOINT ["biliup", "--data-dir", "/home/site/wwwroot/downloads"]
+# Set working directory
+WORKDIR /opt
 
+# Add entrypoint script to handle config and cookies
+RUN echo '#!/bin/sh\n\
+if [ ! -f /opt/config.yaml ]; then\n\
+    cp /opt/config.yaml.default /opt/config.yaml\n\
+fi\n\
+if [ -f /opt/cookies.json ]; then\n\
+    exec biliup --config /opt/config.yaml "$@"\n\
+else\n\
+    echo "Warning: cookies.json not found. Some upload features may be limited."\n\
+    exec biliup --config /opt/config.yaml "$@"\n\
+fi' > /entrypoint.sh && \
+    chmod +x /entrypoint.sh
 
+ENTRYPOINT ["/entrypoint.sh"]
 
 

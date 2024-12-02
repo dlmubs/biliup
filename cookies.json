@@ -1,0 +1,65 @@
+{
+  "cookie_info": {
+    "cookies": [
+      {
+        "expires": 1740847007,
+        "http_only": 1,
+        "name": "SESSDATA",
+        "same_site": 0,
+        "secure": 0,
+        "value": "620fa842%2C1748623007%2Cccf38fc2CjCijLiVfbLfLpzpk2FYvAWWvScc42APFgHA382U3DoLC94rdngR7npwznShXOsRq0QSVnhvR3pZeXNHNFdWT1JGYzRMaEo4bHYweEF6NVM0MUFDUlVpUE9qd1I1STRUcU5PNlpjaFQ1SWhmbE9aRzFwU2pfM29wdTNzeThtZXFnazFyREdNd1Z3IIEC"
+      },
+      {
+        "expires": 1740847007,
+        "http_only": 0,
+        "name": "bili_jct",
+        "same_site": 0,
+        "secure": 0,
+        "value": "e3e20dbda627848380fd390db0b5d849"
+      },
+      {
+        "expires": 1740847007,
+        "http_only": 0,
+        "name": "DedeUserID",
+        "same_site": 0,
+        "secure": 0,
+        "value": "1968352060"
+      },
+      {
+        "expires": 1740847007,
+        "http_only": 0,
+        "name": "DedeUserID__ckMd5",
+        "same_site": 0,
+        "secure": 0,
+        "value": "d3ccd22dd3ef2241"
+      },
+      {
+        "expires": 1740847007,
+        "http_only": 0,
+        "name": "sid",
+        "same_site": 0,
+        "secure": 0,
+        "value": "fjxojagj"
+      }
+    ],
+    "domains": [
+      ".bilibili.com",
+      ".biligame.com",
+      ".bilibili.cn",
+      ".bilicomic.com",
+      ".bilicomics.com"
+    ]
+  },
+  "sso": [
+    "https://passport.bilibili.com/api/v2/sso",
+    "https://passport.biligame.com/api/v2/sso",
+    "https://passport.bilibili.cn/api/v2/sso"
+  ],
+  "token_info": {
+    "access_token": "809d9d20b44d02a15b42c206a180c6c2CjCijLiVfbLfLpzpk2FYvAWWvScc42APFgHA382U3DoLC94rdngR7npwznShXOsRq0QSVnhvR3pZeXNHNFdWT1JGYzRMaEo4bHYweEF6NVM0MUFDUlVpUE9qd1I1STRUcU5PNlpjaFQ1SWhmbE9aRzFwU2pfM29wdTNzeThtZXFnazFyREdNd1Z3IIEC",
+    "expires_in": 15552000,
+    "mid": 1968352060,
+    "refresh_token": "63d6158d77a22d1eefe81529ec8059c2"
+  },
+  "platform": "BiliTV"
+}
